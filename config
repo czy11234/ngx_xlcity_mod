@@ -1,0 +1,11 @@
+
+HTTP_MODULES="$HTTP_MODULES ngx_http_ip_city_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ip_city.cpp $ngx_addon_dir/ip_city_mod.cpp"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/match_pub.c"
+
+#CFLAGS="$CFLAGS -DNGX_HTTP_REALIP"
+
+BASELIB=/usr/local/BaseLib
+CFLAGS="$CFLAGS -I$BASELIB -DNGX_HTTP_REALIP"
+CORE_LIBS="$CORE_LIBS $BASELIB/baselib.a"
+
